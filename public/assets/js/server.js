@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 require("./routes/apiroutes")(app);
+require("./routes/hmtlroutes")(app);
 
 //PORT listener
 app.listen(PORT, function () {
