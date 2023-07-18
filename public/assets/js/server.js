@@ -9,6 +9,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+require("./routes/apiroutes")(app);
+
+//PORT listener
 app.listen(PORT, function () {
-  console.log(`server is listening on PORT: ${PORT}`);
+  console.log(`Listening on PORT: ${PORT}`);
 });
