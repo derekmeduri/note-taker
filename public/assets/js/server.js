@@ -1,7 +1,9 @@
+//required libraries
 const express = require("express");
 const path = require("path");
 const PORT = 3001;
 
+//creating app with express so we can use express
 const app = express();
 
 //Middleware for parsing json and urlencoded data
