@@ -8,7 +8,7 @@ module.exports = function (app) {
 
     });
 
-    //API POST reuqest
+    //API POST reuqest 
     app.post("", (req, res) {
 
     });
