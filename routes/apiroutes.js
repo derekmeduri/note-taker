@@ -1,20 +1,21 @@
-//required libraries 
-const path = require("path");
+//required libraries
+const router = require("express").Router();
+const store = require("../db/store");
 
-//exporting api routes
-module.exports = function (app) {
-    //API GET request
-    app.get("", (req, res) => {
+//API GET request to get notes from db
+router.get("/notes", (req, res) => {
+  store;
+});
 
-    });
+//API POST reuqest to add note to db
+router.post("/notes", (req, res) => {
+  store;
+});
 
-    //API POST reuqest 
-    app.post("", (req, res) {
+//API DELETE request
+router.delete("", (req, res) => {
+  store;
+});
 
-    });
-
-    //API DELETE request
-    app.delete("", (req, res) {
-
-    });
-};
+//exporting router to
+module.exports = router;

@@ -1,14 +1,14 @@
 //required libraries
-const path = require("path");
+const router = require("express").Router;
 
-//exporting html routes
-module.exports = function (app) {
-  //GET Request
-  app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
-  });
+//GET Request for the notes html file
+router.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+//* selects all other routes
+router.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
 
-  app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
-  });
-};
+//exporting router
+module.exports = router;
