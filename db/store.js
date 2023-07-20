@@ -18,4 +18,19 @@ class Store {
   write() {
     return writeFileAsync("db/db.json", JSON.stringify(note));
   }
+  getNote() {
+    return this.read().then((response) => {
+      let notes;
+
+      //try catch state to parse json from notes
+      //tutoring session with TA
+      try {
+        notes = [].concat(JSON.parse(response));
+        // if theres an error throw empty array
+      } catch (error) {
+        notes = [];
+      }
+      return notes;
+    });
+  }
 }
