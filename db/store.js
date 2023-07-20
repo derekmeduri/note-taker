@@ -21,7 +21,7 @@ class Store {
     //write to db
     return writeFileAsync("db/db.json", JSON.stringify(note));
   }
-  //parse date with json
+  //parse note data with json
   getNote() {
     return this.read().then((response) => {
       let notes;
@@ -37,7 +37,7 @@ class Store {
       return notes;
     });
   }
-
+  //adding new note
   addNote(note) {
     const { title, text } = note;
     //if statement to make sure title and text are not blank
@@ -51,7 +51,14 @@ class Store {
 
     //need to get all notes, add new note, write all notes and return newnote
     return this.getNote()
-    .then((response) => [...response, newNote])
-    .then(())
+      .then((response) => [...response, newNote])
+      .then((updatedList) => this.write(updatedList))
+      .then(() => newNote);
+  }
+  //deleting note with unique id
+  deleteNote(id) {
+    return this.getNote()
+    .then((response) = response.filter((note) => note.id !== id ))
+    .then(() => then write )
   }
 }
