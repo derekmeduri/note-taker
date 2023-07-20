@@ -17,7 +17,7 @@ class Store {
     //read from db and creates string value from note
     return readFileAsync("dd/db.json", JSON.stringify(note));
   }
-  write() {
+  write(note) {
     //write to db
     return writeFileAsync("db/db.json", JSON.stringify(note));
   }
@@ -56,9 +56,13 @@ class Store {
       .then(() => newNote);
   }
   //deleting note with unique id
+  //tutoring sessionw with TA sam cordova
   deleteNote(id) {
     return this.getNote()
-    .then((response) = response.filter((note) => note.id !== id ))
-    .then(() => then write )
+      .then((response = response.filter((note) => note.id !== id)))
+      .then(() => this.write());
   }
 }
+
+//exporting store class to be used
+module.exports = new Store();

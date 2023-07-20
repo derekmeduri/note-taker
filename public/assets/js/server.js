@@ -10,8 +10,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-require("./routes/apiroutes")(app);
-require("./routes/hmtlroutes")(app);
+//seting routes for api and html
+const apiRouter = require("./routes/apiroutes");
+const htmlRouter = require("./routes/hmtlroutes");
+//calling api and html routes
+app.use("/notes", apiRouter);
+app.use("/notes", htmlRouter);
 
 //PORT listener
 app.listen(PORT, function () {
