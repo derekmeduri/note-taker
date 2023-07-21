@@ -1,14 +1,13 @@
 //required libraries
 const router = require("express").Router();
-const { response } = require("express");
 const store = require("../db/store");
 
 //API GET request to get notes from db
 router.get("/notes", (req, res) => {
   store
     .getNote()
-    .then((response) => {
-      return res.json(response);
+    .then((notes) => {
+      return res.json(notes);
     })
     .catch((error) => res.status(500).json(error));
 });
