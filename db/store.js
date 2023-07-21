@@ -3,11 +3,12 @@ const util = require("util");
 const fs = require("fs");
 
 //required package for unique ids
-const {v4 as uuidv4} = require("uuid");
+const { v4: as uuidv4 } = require("uuid");
 const { title } = require("process");
 const { text, response } = require("express");
 
 //functions to read and write files
+//tutoring session with TA sam cordova
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -23,18 +24,19 @@ class Store {
   }
   //parse note data with json
   getNote() {
-    return this.read().then((response) => {
-      let notes;
+    return this.read().then((notes) => {
+      //seeting parsednotes var so we can store parsed data
+      let parsedNotes;
 
       //try catch state to parse json from notes
       //tutoring session with TA
       try {
-        notes = [].concat(JSON.parse(response));
+        parsedNotes = [].concat(JSON.parse(notes));
         // if theres an error throw empty array
       } catch (error) {
-        notes = [];
+        parsedNotes = [];
       }
-      return notes;
+      return parsedNotes;
     });
   }
   //adding new note
@@ -47,11 +49,11 @@ class Store {
       );
     }
     //creating new note with unique id
-    const newNote = { title, text, id: uuid() };
+    const newNote = { title, text, id: uuidv4() };
 
     //need to get all notes, add new note, write all notes and return newnote
     return this.getNote()
-      .then((response) => [...response, newNote])
+      .then((notes) => [...notes, newNote])
       .then((updatedList) => this.write(updatedList))
       .then(() => newNote);
   }
