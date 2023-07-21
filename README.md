@@ -52,6 +52,7 @@
 
     Tutoring session with Sam Cordova
     https://www.npmjs.com/package/uuid?activeTab=readme
+    https://www.youtube.com/watch?v=2gE2K8i5tvs
 
     ## License
 

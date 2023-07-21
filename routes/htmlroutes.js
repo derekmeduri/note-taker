@@ -1,5 +1,6 @@
 //required libraries
 const router = require("express").Router;
+const path = require("path");
 
 //GET Request for the notes html file
 router.get("/notes", function (req, res) {

@@ -23,6 +23,7 @@ router.post("/notes", (req, res) => {
 //API DELETE request
 router.delete("/notes/:id", (req, res) => {
   store
+    //remove note based on id param
     .removeNote(req.params.id)
     .then(() => res.json({ ok: true }))
     .catch((error) => res.status(500).json(error));

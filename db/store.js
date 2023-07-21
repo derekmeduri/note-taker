@@ -15,11 +15,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
 class Store {
   read() {
     //read from db and creates string value from note
-    return readFileAsync(".db/db.json", JSON.stringify(note));
+    return readFileAsync("db/db.json", JSON.stringify(note));
   }
   write(note) {
     //write to db
-    return writeFileAsync(".db/db.json", JSON.stringify(note));
+    return writeFileAsync("db/db.json", JSON.stringify(note));
   }
   //parse note data with json
   getNote() {
