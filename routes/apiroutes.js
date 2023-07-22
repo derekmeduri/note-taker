@@ -5,7 +5,7 @@ const store = require("../db/store");
 //API GET request to get notes from db
 router.get("/notes", (req, res) => {
   store
-    .getNote()
+    .getNotes()
     .then((notes) => {
       return res.json(notes);
     })
