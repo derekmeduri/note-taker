@@ -50,6 +50,7 @@
 
     ## Sources
 
+    Received source code from: OSU-VIRT-FSF-PT-04-2023-U-LOLC
     Tutoring session with Sam Cordova
     https://www.npmjs.com/package/uuid?activeTab=readme
     https://www.youtube.com/watch?v=2gE2K8i5tvs

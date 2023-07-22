@@ -1,7 +1,6 @@
 //required libraries
 const express = require("express");
 const PORT = process.env.PORT || 3001;
-
 //creating app with express so we can use express
 const app = express();
 
