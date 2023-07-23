@@ -13,8 +13,8 @@ app.use(express.static("public"));
 const apiRouter = require("./routes/apiroutes");
 const htmlRouter = require("./routes/hmtlroutes");
 //calling api and html routes
-app.use("/notes", apiRouter);
-app.use("/notes", htmlRouter);
+app.use("/api/notes", apiRouter);
+app.use("/", htmlRouter);
 
 //PORT listener
 app.listen(PORT, function () {
