@@ -26,7 +26,7 @@
 
     ## Installation
 
-    node.js and expressjs are needed to run this app.
+    node.js, expressjs, util, and uuid are needed to run this app. use the function npm i to ensure all packages are installed before using.
 
     ## Usage
 

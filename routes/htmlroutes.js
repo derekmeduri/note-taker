@@ -1,6 +1,7 @@
 //required libraries
-const router = require("express").Router();
+const router = express.Router();
 const path = require("path");
+const express = require("express");
 //const express = require("express");
 
 //GET Request for the notes html file
