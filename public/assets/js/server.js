@@ -17,14 +17,6 @@ const htmlRouter = require("./routes/hmtlroutes");
 app.use("/api", apiRouter);
 app.use("/", htmlRouter);
 
-// app.get("/", (req, res) =>
-//   res.sendFile(path.join(__dirname, "/public/index.html"))
-// );
-
-// app.get("/public/notes.html", (req, res) =>
-//   res.sendFile(__dirname, "/public/notes/html")
-// );
-
 //PORT listener
 app.listen(PORT, function () {
   console.log(`Listening on PORT: ${PORT}`);
