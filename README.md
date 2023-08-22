@@ -6,6 +6,10 @@
 
 - - [Description](#Description)
 
+- - [Screenshot](#screenshot)
+
+- - [Link](#link)
+
 - - [Installation](#Installation)
 
 - - [Usage](#Usage)
@@ -23,6 +27,14 @@
     ## Description
 
     Creating an application that allows the user to add notes so they can organize their day. This app will allow users to save and remove tasks as they are needed and completed.
+
+    ## Screenshot
+
+    ![Note Taker](./public/assets/images/%20notetaker.png)
+
+    ## Link
+
+    https://meduri-note-taker-86eae7654fa3.herokuapp.com/
 
     ## Installation
 
