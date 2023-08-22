@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 //seting routes for api and html
 const apiRouter = require("./routes/apiroutes");
-const htmlRouter = require("./routes/hmtlroutes");
+const htmlRouter = require("./routes/htmlroutes");
 //calling api and html routes
 app.use("/api", apiRouter);
 app.use("/", htmlRouter);
