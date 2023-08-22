@@ -3,8 +3,6 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-//const express = require("express");
-
 //GET Request for the notes html file
 router.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/notes.html"));
