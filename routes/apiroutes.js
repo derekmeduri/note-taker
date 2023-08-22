@@ -1,7 +1,7 @@
 //required libraries
+const express = require("express");
 const router = express.Router();
 const store = require("../db/store");
-const express = require("express");
 
 //API GET request to get notes from db
 router.get("/notes", (req, res) => {
